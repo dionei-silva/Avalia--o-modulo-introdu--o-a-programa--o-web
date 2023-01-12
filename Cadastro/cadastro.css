@@ -36,6 +36,10 @@ section {
     box-shadow: 10px 5px 5px black;
     border-radius: 5%;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 .logar-input {
     border-radius: 5px;
     width: 400px;

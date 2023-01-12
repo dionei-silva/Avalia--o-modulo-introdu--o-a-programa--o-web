@@ -12,16 +12,16 @@
             <section class="container-box">
                 <h1>Página de Recados hospitalares</h1>
                 <h2>Cadastre-se</h2>
-                <form>
+                <form onsubmit="encontrarContato(event)">
                     <label for="nome">Usuario</label>
                     <input
                         required
                         id="cadastro-usuario"
                         class="logar-input"
                         value=""
-                        type="nome"
-                        name="nome"
-                        placeholder="Digite seu nome completo"
+                        type="email"
+                        name="email"
+                        placeholder="Digite seu email"
                     />
                     <label for="password">Senha</label>
                     <input
