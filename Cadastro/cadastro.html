@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./cadastro.css" />
+        <title>Cadastro</title>
+    </head>
+    <body>
+        <main>
+            <section class="container-box">
+                <h1>Página de Recados hospitalares</h1>
+                <h2>Cadastre-se</h2>
+                <form>
+                    <label for="nome">Usuario</label>
+                    <input
+                        required
+                        id="cadastro-usuario"
+                        class="logar-input"
+                        value=""
+                        type="nome"
+                        name="nome"
+                        placeholder="Digite seu nome completo"
+                    />
+                    <label for="password">Senha</label>
+                    <input
+                        required
+                        id="cadastro-senha"
+                        class="logar-input"
+                        value=""
+                        type="password"
+                        name="password"
+                        placeholder="Digite a sua senha"
+                    />
+                    <label for="password">Senha</label>
+                    <input
+                        required
+                        id="repete-senha"
+                        class="logar-input"
+                        value=""
+                        type="password"
+                        name="password"
+                        placeholder="Repita a sua senha"
+                    />
+                    <a href="../Login/login.html"
+                        ><input
+                            onclick="cadastrar()"
+                            class="button-71"
+                            type="submit"
+                            value="Salvar"
+                    /></a>
+                    <button class="button-71">
+                        <a href="/Login/login.html">Voltar</a>
+                    </button>
+                </form>
+            </section>
+        </main>
+        <script src="./cadastro.js"></script>
+    </body>
+</html>
