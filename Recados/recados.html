@@ -11,12 +11,12 @@
         <main>
             <section class="container-box">
                 <h1>Página de Recados hospitalares</h1>
+                <button class="button-vermelho-sair">
+                    <a href="/Login/login.html">Sair</a>
+                </button>
                 <form>
-                    <input
-                        type="text"
-                        required
-                        placeholder="Descreva seu recado"
-                    />
+                    <input type="text" required placeholder="Descricao" />
+                    <input type="text" required placeholder="Detalhamento" />
                     <label for="descricao"></label>
                     <button class="button-azul">Salvar</button>
                 </form>
@@ -24,18 +24,13 @@
 
                 <ol>
                     <li>
-                        <div>
-                            <p>555</p>
-                        </div>
+                        <div id="listarRecados"></div>
                         <div>
                             <button class="button-verde">Editar</button>
                             <button class="button-vermelho">Apagar</button>
                         </div>
                     </li>
                 </ol>
-                <button class="button-azul">
-                    <a href="/Login/login.html">Voltar </a>
-                </button>
             </section>
         </main>
         <script src="./recados.js"></script>

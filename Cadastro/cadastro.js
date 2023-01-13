@@ -14,6 +14,7 @@ function cadastrar() {
     listaUsuarios.push({
         nome: nomeUsuario.value,
         senha: senhaUsuario.value,
+        recados: [],
     });
 
     localStorage.setItem("listaUsuarios", JSON.stringify(listaUsuarios));
