@@ -15,10 +15,22 @@
                     <a href="/Login/login.html">Sair</a>
                 </button>
                 <form>
-                    <input type="text" required placeholder="Descricao" />
-                    <input type="text" required placeholder="Detalhamento" />
+                    <input
+                        id="descricaoUsuario"
+                        type="text"
+                        required
+                        placeholder="Descricao"
+                    />
+                    <input
+                        id="detalhamentoUsuario"
+                        type="text"
+                        required
+                        placeholder="Detalhamento"
+                    />
                     <label for="descricao"></label>
-                    <button class="button-azul">Salvar</button>
+                    <button onclick="listarRecados()" class="button-azul">
+                        Salvar
+                    </button>
                 </form>
                 <hr />
 
@@ -26,6 +38,8 @@
                     <li>
                         <div id="listarRecados"></div>
                         <div>
+                            <p></p>
+                            <p></p>
                             <button class="button-verde">Editar</button>
                             <button class="button-vermelho">Apagar</button>
                         </div>
