@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    transition: all 0.7s;
 }
 
 body {
@@ -37,6 +36,14 @@ input {
     font-size: 20px;
 }
 
+.div-principal {
+    font-size: 20px;
+}
+
+/* .div-btn {
+    
+} */
+
 .container-box {
     width: 70vw;
     padding: 15px;
@@ -57,10 +64,9 @@ li {
     align-items: center;
     border: rgb(203, 196, 196) solid 0.5px;
     width: 60vw;
-    font-size: 30px;
-    padding: 10px;
-    border-radius: 5px;
+    font-size: 25px;
     margin: 5px;
+    border-radius: 5px;
 }
 
 form {
@@ -91,12 +97,11 @@ form {
 }
 
 .button-vermelho-sair {
-    left: 54vh;
-    bottom: 5vh;
-    width: 15vh;
+    height: 50px;
+    width: 100px;
     background-color: #ff0000;
+    border-radius: 54px;
     border: 0;
-    border-radius: 56px;
     color: #fff;
     cursor: pointer;
     display: inline-block;
@@ -105,9 +110,10 @@ form {
     font-size: 18px;
     font-weight: 600;
     outline: 0;
-    padding: 16px 21px;
-    position: relative;
+    position: absolute;
     text-align: center;
+    top: 10px;
+    right: 10px;
 }
 a {
     text-decoration: none;
