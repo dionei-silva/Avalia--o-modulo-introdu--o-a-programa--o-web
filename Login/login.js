@@ -10,7 +10,7 @@ function encontrarContato() {
     );
 
     if (encontrarNome) window.location.href = "../Recados/recados.html";
-    else alert("Email e senha Invalidos. Tente novamente!!");
+    else return alert("Email e senha Invalidos. Tente novamente!!");
 
     let usuarioLogado = {
         email: usuario.value,
