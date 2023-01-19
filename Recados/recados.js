@@ -1,9 +1,19 @@
 let descricao = document.querySelector("#descricaoUsuario");
 let detalhamento = document.querySelector("#detalhamentoUsuario");
 let usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+let btnEditar = document.querySelector("#btnEditar");
+if (usuarioLogado === null) {
+    alert("Acesso a pagina, somente com login!!");
+    window.location.href = "../Login/login.html";
+}
+
+function sair() {
+    localStorage.removeItem("usuarioLogado");
+    window.location.href = "../Login/login.html";
+}
 
 function listarRecados() {
-    if (descricao.value == "" && detalhamento.value == "")
+    if (descricao.value === "" || detalhamento.value === "")
         return alert("Obrigatorio o preenchimento de todos os campos!!");
 
     usuarioLogado.recados.push({
@@ -24,9 +34,10 @@ function mostrarRecados() {
         recado.innerHTML = `
             <div class="div-principal">
             <div>
-            <h2>${i + 1} | ${usuario.descricao} ${usuario.detalhamento}</h2>
+            <h2>${i + 1}  | Descrição: ${usuario.descricao} </h2>
+            <h4>Detalhamento: ${usuario.detalhamento}</h4>
             </div>
-            <div>
+            <div class="div-btn">
                 <button onclick="editarRecado(${i})" class="button-verde">Editar</button>
                 <button onclick="apagarRecado(${i})" class="button-vermelho">Apagar</button>
             </div>
@@ -43,6 +54,9 @@ function mostrarRecados() {
 
         olHTML.appendChild(recado);
         salvarRecadosJSON();
+
+        descricao.value = "";
+        detalhamento.value = "";
     });
 }
 
@@ -69,6 +83,7 @@ function apagarRecado(i) {
 }
 
 function editarRecado(i) {
+    /* btnEditar.setAttribute("style", "display:none"); */
     let editarRecado = usuarioLogado.recados[i];
 
     descricao.value = editarRecado.descricao;
@@ -87,7 +102,21 @@ function editarRecado(i) {
     console.log(usuarioLogado.recados[i]);
 }
 
-//fewferfrrfe
+//descricao.focus();
+
+/* btnSalvarEditado.addEventListener("click", () => {
+    if (descricao.value !== "" && detalhamento.value !== "") {
+        userLogado.post[index] = {
+            descricao: descricao.value,
+            detalhamento: detalhamento.value,
+        };
+        updateDB();
+        descricao.value = "";
+        detalhamento.value = "";
+        btnInserir.setAttribute("style", "display:block");
+        btnSalvarEditado.setAttribute("style", "display:none");
+    }
+}); */
 
 // function editar(i) {
 //   btnInserir.setAttribute("style", "display:none");
