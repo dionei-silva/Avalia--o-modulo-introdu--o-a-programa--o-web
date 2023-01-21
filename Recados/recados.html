@@ -16,17 +16,23 @@
                 </button>
                 <form onsubmit="return false">
                     <input
+                        maxlength="20"
                         id="descricaoUsuario"
                         type="text"
                         placeholder="Descricao"
                     />
                     <input
+                        maxlength="40"
                         id="detalhamentoUsuario"
                         type="text"
                         placeholder="Detalhamento"
                     />
                     <label for="descricao"></label>
-                    <button onclick="listarRecados()" class="button-azul">
+                    <button
+                        onclick="listarRecados()"
+                        id="salvar"
+                        class="button-azul"
+                    >
                         Salvar
                     </button>
                 </form>
