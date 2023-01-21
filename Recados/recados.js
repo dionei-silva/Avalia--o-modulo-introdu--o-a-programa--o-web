@@ -1,5 +1,6 @@
 let descricao = document.querySelector("#descricaoUsuario");
 let detalhamento = document.querySelector("#detalhamentoUsuario");
+let listaUsuarios = JSON.parse(localStorage.getItem("listaUsuarios"));
 let usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
 let salvar = document.querySelector("#salvar");
 if (usuarioLogado === null) {
@@ -8,6 +9,7 @@ if (usuarioLogado === null) {
 }
 
 function sair() {
+    salvarDadosJSON();
     localStorage.removeItem("usuarioLogado");
     window.location.href = "../Login/login.html";
 }
@@ -57,6 +59,7 @@ function salvarRecadosJSON() {
 }
 
 setTimeout(() => {
+    passarDados();
     mostrarRecados();
 });
 
@@ -99,4 +102,23 @@ function salvarEdicao(i) {
     descricao.value = "";
     detalhamento.value = "";
     mostrarRecados();
+}
+
+function salvarDadosJSON() {
+    listaUsuarios.forEach((dados) => {
+        console.log(dados);
+        if (dados.nome == usuarioLogado.email) {
+            dados.recados = usuarioLogado.recados;
+        }
+        localStorage.setItem("listaUsuarios", JSON.stringify(listaUsuarios));
+    });
+}
+
+function passarDados() {
+    listaUsuarios.forEach((dados) => {
+        console.log(dados);
+        if (dados.nome == usuarioLogado.email) {
+            usuarioLogado.recados = dados.recados;
+        }
+    });
 }
