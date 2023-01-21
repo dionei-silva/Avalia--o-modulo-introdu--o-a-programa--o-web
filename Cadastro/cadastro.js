@@ -31,9 +31,15 @@ function cadastrar() {
 
         localStorage.setItem("listaUsuarios", JSON.stringify(listaUsuarios));
 
-        window.location.href = "../Login/login.html";
+        alert("Usuario cadastrado com Sucesso");
+
+        sair();
     } else {
         alert("Preencha todos os campos!");
         return;
     }
+}
+
+function sair() {
+    window.location.href = "../Login/login.html";
 }

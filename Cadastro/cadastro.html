@@ -12,7 +12,7 @@
             <section class="container-box">
                 <h1>Página de Recados hospitalares</h1>
                 <h2>Cadastre-se</h2>
-                <form onsubmit="encontrarContato(event)">
+                <form>
                     <label for="nome">Email</label>
                     <input
                         required
@@ -43,16 +43,18 @@
                         name="password"
                         placeholder="Repita a sua senha"
                     />
-                    <a href="../Login/login.html"
-                        ><input
-                            onclick="cadastrar()"
-                            class="button-azul"
-                            type="submit"
-                            value="Salvar"
-                    /></a>
-                    <button class="button-azul">
-                        <a href="/Login/login.html">Voltar</a>
-                    </button>
+                    <input
+                        type="button"
+                        onclick="cadastrar()"
+                        class="button-azul"
+                        value="Salvar"
+                    />
+                    <input
+                        type="button"
+                        onclick="sair()"
+                        class="button-azul"
+                        value="Voltar"
+                    />
                 </form>
             </section>
         </main>
